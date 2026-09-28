@@ -1,10 +1,13 @@
 <?php
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MessageController;
+
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use PHPUnit\Framework\Attributes\PostCondition;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/dashboard', function () {
@@ -23,3 +26,6 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 Route::resource('message', MessageController::class);
+
+Route::resource('posts',DashboardController::class);
+
