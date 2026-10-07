@@ -1,4 +1,5 @@
 <x-app-layout>
+   
     <x-slot name="header">
         <div class="flex items-center gap-2">
             <i class="fa-solid fa-chart-pie text-indigo-600"></i>
@@ -9,7 +10,8 @@
     </x-slot>
 
     <!-- Main Dashboard Container (Inalis ang h-screen/w-screen para sumunod sa master layout) -->
-    <div class="space-y-8 animate-fade-in pb-12">
+
+    <div class="space-y-8 animate-fade-in pb-12 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Feature 1: Modern Welcome Banner & Quick Notification -->
         <div class="bg-gradient-to-r from-indigo-600 via-indigo-700 to-violet-700 rounded-2xl p-6 md:p-8 shadow-lg shadow-indigo-100 relative overflow-hidden text-white">
@@ -149,4 +151,5 @@
                                         <div class="flex-1 min-w-0 pt-1.5 flex justify-between space-x-4">
                                             <div>HI user</div>
                                         </div>
+     
 </x-app-layout>

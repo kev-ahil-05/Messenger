@@ -1,13 +1,13 @@
 <?php
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MessageController;
-
+use App\Http\Controllers\PdsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Framework\Attributes\PostCondition;
 
 Route::get('/', function () {
-    return view('home');
+    return view('login');
 });
 
 Route::get('/dashboard', function () {
@@ -28,4 +28,7 @@ require __DIR__.'/auth.php';
 Route::resource('message', MessageController::class);
 
 Route::resource('posts',DashboardController::class);
+
+
+Route::resource('print-file',PdsController::class);
 

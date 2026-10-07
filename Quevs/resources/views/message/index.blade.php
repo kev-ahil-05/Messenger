@@ -113,8 +113,7 @@
         </div>
     </div>
 
-    <!-- EDIT MODAL LAYER (Hidden by default) -->
-    <div id="editmsg" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden animate-fade-in">
+    <!-- EDIT MODAL LAYER (Hidden by default) --> {{--  <div id="editmsg" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden animate-fade-in">
         <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-2xl border border-slate-100 relative mx-4">
 
             <!-- Close Button -->
@@ -126,7 +125,7 @@
                 <i class="fa-solid fa-pen-to-square text-indigo-600"></i> Edit Message
             </h3>
 
-            <!-- Form para sa Edit Update -->
+            <!-- Form para sa Edit Update --> {{--
             <form action="{{ route('message.update') }}" method="POST" class="space-y-4">
                 @csrf
                 @method('PUT')
@@ -149,7 +148,8 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> --}}
+
 
     <!-- JAVASCRIPT LOGIC -->
     <script>

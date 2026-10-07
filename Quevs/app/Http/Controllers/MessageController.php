@@ -68,29 +68,8 @@ class MessageController extends Controller
      */
     public function update(Request $request)
 {
-    // 1. I-validate ang message pati ang hidden message_id field
-    $validated = $request->validate([
-        'message_id' => 'required|exists:messages,id', // Sinisiguradong nage-exist ang ID sa table ng messages
-        'message'    => 'required|string|max:255',
-    ]);
 
-    // 2. Hanapin ang mismong mensahe gamit ang id mula sa form request
-    $message = Message::findOrFail($request->message_id);
-
-    // [Optional Security Check] Siguraduhin na ang nag-eedit ay ang mismong may-ari ng chat
-    if ($message->users_id !== auth()->id()) {
-        return redirect()->route('message.index')->with('error', 'Unauthorized action!');
-    }
-
-    // 3. I-update ang mensahe gamit ang validated text
-    $message->update([
-        'message' => $validated['message']
-    ]);
-
-    // 4. Bumalik sa chat list na may success flash message
-    return redirect()->route('message.index')->with('success', 'Message updated successfully!');
 }
-
 
 
 

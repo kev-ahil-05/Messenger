@@ -34,6 +34,12 @@
                         <i class="fa-solid fa-chart-simple text-xs opacity-70"></i>
                         <span>Dashboard</span>
                     </a>
+
+                     <a href="{{ route('print-file.index') }}"
+                       class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all {{ request()->routeIs('print-file.index') ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}">
+                        <i class="fa-solid fa-print text-xs opacity-70"></i>
+                        <span>Print File</span>
+                    </a>
                 </div>
             </div>
 

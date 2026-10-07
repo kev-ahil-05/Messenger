@@ -8,18 +8,20 @@
         <title>{{ config('Messenger', 'Quevs') }}</title>
 
         <!-- Fonts -->
+        <!-- Font Awesome CDN Link -->
+       <link rel="stylesheet" href="https://cloudflare.com">
+ 
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <!-- Font Awesome Free 6.x.x CDN -->
-        <link rel="stylesheet" href="https://cloudflare.com" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZmH+zGtG+Nv9e+E1YBqXhZ+8C5e5b">
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
+            
 
             <!-- Page Heading -->
             @isset($header)
