@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 use PHPUnit\Framework\Attributes\PostCondition;
 
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
 
 Route::get('/dashboard', function () {
