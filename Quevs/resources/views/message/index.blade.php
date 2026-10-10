@@ -1,38 +1,12 @@
-<x-app-layout>
+<x-layout>
     <!-- Main Screen Container -->
-    <div class="flex h-[calc(100vh-4rem)] w-full bg-slate-50 overflow-hidden">
+    <div class="flex h-[calc(100vh-4rem)] w-full bg-slate-50 overflow-hidden items-center mt-2">
 
         <!-- 1. LEFT SIDEBAR: Listahan ng mga Chats -->
-        <div class="w-72 h-full border-r border-slate-200 flex flex-col bg-white flex-shrink-0 shadow-sm">
-            <!-- Sidebar Header -->
-            <div class="p-4 border-b border-slate-100 bg-white">
-                <h1 class="text-xl font-bold text-slate-900 tracking-tight">Chats</h1>
-                <div class="mt-2 relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-                        <i class="fa-solid fa-magnifying-glass text-xs"></i>
-                    </span>
-                    <input name="search" value="{{ $search ?? '' }}" type="text" placeholder="Search Messenger"
-                        class="w-full bg-slate-100 text-xs rounded-lg pl-9 pr-4 py-2 border border-transparent focus:bg-white focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-100 transition-all">
-                </div>
-            </div>
-
-            <!-- Listahan ng mga Users / Active Contacts -->
-            <div class="flex-1 overflow-y-auto p-3 space-y-2 bg-slate-50/50">
-                <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
-                    <label class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1.5 px-1">Active Users</label>
-                    <div class="relative">
-                        <select class="w-full bg-slate-50 border border-slate-200 rounded-lg text-sm font-medium text-slate-700 py-2 px-3 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none cursor-pointer appearance-none">
-                            @foreach ($users as $user)
-                                <option value="{{ $user->name }}">🟢 {{ $user->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <!-- 2. RIGHT SIDE: Chat Window -->
-        <div class="flex-1 h-full flex flex-col bg-slate-100 items-center justify-between">
+        <div class="flex-1 h-full  mt-2 flex flex-col bg-slate-100 items-center justify-between">
 
             <!-- Inner Content Wrapper -->
             <div class="w-full max-w-4xl h-full flex flex-col bg-white border-x border-slate-200 shadow-inner relative">
@@ -171,4 +145,6 @@
 
         </script>
 
-        </x-app-layout>
+  </x-layout>
+
+  

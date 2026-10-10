@@ -1,6 +1,9 @@
-<x-app-layout>
-   
-    <x-slot name="header">
+
+
+
+<x-layout>
+   <div class="p-6 bg-slate-100 dark:bg-neutral-900 min-h-screen">
+        <x-slot name="header">
         <div class="flex items-center gap-2">
             <i class="fa-solid fa-chart-pie text-indigo-600"></i>
             <h2 class="font-bold text-xl text-slate-800 leading-tight">
@@ -152,4 +155,6 @@
                                             <div>HI user</div>
                                         </div>
      
-</x-app-layout>
+   </div>
+
+</x-layout>
