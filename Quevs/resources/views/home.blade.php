@@ -23,16 +23,22 @@
         </div>
 
         <!-- Posts Feed Layout -->
-        <div class="w-full max-w-5xl mx-auto flex-1 min-w-0">
+        <div class="w-full max-w-7xl mx-auto flex-1 min-w-0">
             <div class="space-y-4">
                 @foreach ($posts as $post)
                     <div class="card bg-white border border-slate-200 shadow-sm rounded-xl p-6">
-                        <div class="font-bold text-slate-900 text-sm">{{ $post->user ? $post->user->name : 'Anonymous' }}
+                         <div class="text-slate-700 text-sm leading-relaxed flex justify-center">{{ $post->post }}</div>
+                                <span class="font-medium text-slate-500">{{ $post->user->name ?? 'Unknown' }}</span>
+                        <div class="font-bold text-slate-900 text-sm"></div>
+                        
+                         <div class="flex justify-center text-xs text-slate-400 mb-2 h-100 w-100">
+                            <img src="{{ asset('storage/' . $post->file) }}" alt="{{ $post->file }}" class="rounded my-2">
+
                         </div>
                         <div class="text-xs text-slate-400 mb-2">
                             {{ $post->created_at ? $post->created_at->timezone('Asia/Manila')->format('h:i A') : '' }}
                         </div>
-                        <div class="text-slate-700 text-sm leading-relaxed">{{ $post->post }}</div>
+                         
                     </div>
                 @endforeach
             </div>

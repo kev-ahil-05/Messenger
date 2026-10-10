@@ -2,24 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Post;
-use App\Models\user;
-class DashboardController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
-
     {
-        $posts = Post::with('user')->latest()->take(50)->get();
-        $users = User::all();
+        $posts = Post::with('user')->latest()->get();
         return view('home', compact('posts'));
-}
+    }
 
-    /**h
+    /**
      * Show the form for creating a new resource.
      */
     public function create()
@@ -32,26 +28,14 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
+        // $validated = $request->validate([
+        //     'post' => 'required|string|max:255',
+        //     'file' => 'nullable|file|mimes:jpg,jpeg,png,pdf,doc,docx|max:2048',
+        // ]);
 
-        $validated = $request->validate([
-         'post' => 'required|string|max:255',
-         'file' => 'required|image|mimes:jpg,png,pdf|max:2048',
-           ]);
-
-
-        if ($request->hasFile('file')){
-            $path =$request->file('file')->store('documents','public');
-
-           $validated['file']= $path;
-        }
-       
         
-        $validated['user_id'] = auth()->id();
 
-         Post::create($validated);
-
-            return redirect()->back()->with('success', 'Post has been created');
-
+        // return redirect()->back()->with('success', 'Post created successfully!');
     }
 
     /**
@@ -67,10 +51,7 @@ class DashboardController extends Controller
      */
     public function edit(string $id)
     {
-        $post = Post::findOrFail($id);
-
-         return view('Dashboard')->with('success', 'Post as been delete');
-
+        //
     }
 
     /**
@@ -86,9 +67,6 @@ class DashboardController extends Controller
      */
     public function destroy(string $id)
     {
-        $post = Post::findOrFail($id);
-        $post->delete();
-
-        return view('Dashboard')->with('success', 'Post as been delete');
+        //
     }
 }
