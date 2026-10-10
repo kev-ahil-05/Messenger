@@ -15,14 +15,17 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-               
-            </div>
+        <div class="min-h-screen flex flex-col sm:justify-center items-center p-4 sm:p-6 bg-slate-50 dark:bg-neutral-950">
+    <!-- Logo Space (Optional) -->
+    <div class="mb-4">
+        {{-- Maaari mong ilagay ang logo mo rito kung gusto mo --}}
+    </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
-            </div>
-        </div>
+    
+    <div class="w-full sm:max-w-md bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 rounded-sm shadow-xl p-6 sm:p-8 transition-all overflow-hidden">
+        {{ $slot }}
+    </div>
+</div>
+
     </body>
 </html>
