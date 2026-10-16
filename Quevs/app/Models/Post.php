@@ -15,7 +15,7 @@ class Post extends Model
 
      public function user()
     {
-        // belongsTo(RelatedModel, foreign_key)
-        return $this->belongsTo(User::class, 'users_id');
+        
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

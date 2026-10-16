@@ -14,9 +14,6 @@ class DashboardController extends Controller
     public function index()
 
     {
-        $posts = Post::with('user')->latest()->take(50)->get();
-        $users = User::all();
-        return view('home', compact('posts'));
 }
 
     /**h
@@ -33,24 +30,12 @@ class DashboardController extends Controller
     public function store(Request $request)
     {
 
-        $validated = $request->validate([
-         'post' => 'required|string|max:255',
-         'file' => 'required|image|mimes:jpg,png,pdf|max:2048',
-           ]);
+      
 
+      
+      
 
-        if ($request->hasFile('file')){
-            $path =$request->file('file')->store('documents','public');
-
-           $validated['file']= $path;
-        }
        
-        
-        $validated['user_id'] = auth()->id();
-
-         Post::create($validated);
-
-            return redirect()->back()->with('success', 'Post has been created');
 
     }
 
@@ -67,9 +52,8 @@ class DashboardController extends Controller
      */
     public function edit(string $id)
     {
-        $post = Post::findOrFail($id);
-
-         return view('Dashboard')->with('success', 'Post as been delete');
+      
+        
 
     }
 
@@ -86,9 +70,8 @@ class DashboardController extends Controller
      */
     public function destroy(string $id)
     {
-        $post = Post::findOrFail($id);
-        $post->delete();
+      
 
-        return view('Dashboard')->with('success', 'Post as been delete');
+        
     }
 }

@@ -16,7 +16,7 @@ class Message extends Model
 
     public function user()
     {
-        // belongsTo(RelatedModel, foreign_key)
+        
         return $this->belongsTo(User::class, 'users_id');
     }
 }

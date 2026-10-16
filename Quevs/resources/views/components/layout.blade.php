@@ -10,6 +10,7 @@
 
    <!-- Fonts -->
    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link rel="stylesheet" href="https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
    <script src="https://tailwindcss.com"></script>
    <!-- Scripts -->
@@ -194,7 +195,7 @@
                            </g>
                         </switch>
                      </svg>
-                     News Feeds
+                     News Feed
                   </a>
                </li>
                 {{-- <a href="{{ route('posts.index') }}"
@@ -223,7 +224,7 @@
                            d="M256 0C114.833 0 0 114.833 0 256s114.833 256 256 256 256-114.833 256-256S397.167 0 256 0m0 472.341c-119.275 0-216.341-97.066-216.341-216.341S136.725 39.659 256 39.659c119.295 0 216.341 97.066 216.341 216.341S375.275 472.341 256 472.341"
                            data-original="#000000" />
                      </svg>
-                     Schedules
+                     Schedule
                   </a>
                </li>
             </ul>

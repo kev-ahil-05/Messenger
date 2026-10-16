@@ -68,8 +68,17 @@ class MessageController extends Controller
      */
     public function update(Request $request)
 {
+     $request->validate([
+            'message' => 'required|string|max:255',
+        ]);
 
-}
+        $message = new Message();
+        $message->message = $request->input('message');
+        $message->users_id = auth()->id();
+        $message->save();
+    return redirect(route('message.index', absolute: false))->with('success', 'Message updated successfully!');
+}      
+     
 
 
 
@@ -78,6 +87,8 @@ class MessageController extends Controller
      */
     public function destroy(Message $message)
     {
-        //
+        $message->delete($message);
+
+        return redirect(route('message.index', absolute: false))->with('success', 'Message updated successfully!');
     }
 }
