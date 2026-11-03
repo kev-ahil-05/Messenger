@@ -18,7 +18,7 @@
                     <!-- Title Room -->
                     <div class="flex items-center gap-2">
                         <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></div>
-                        <h1 class="font-bold text-slate-800 tracking-tight">Quevs Global Chat</h1>
+                        <h1 class="font-bold text-slate-800 tracking-tight">Quev Global Chat</h1>
                     </div>
 
                     <!-- Profile Avatar and User Info -->
