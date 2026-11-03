@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Message;
 use App\Models\user;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 class DashboardController extends Controller
 {
     /**
@@ -14,7 +16,11 @@ class DashboardController extends Controller
     public function index()
 
     {
-}
+       $post = Post::all()->count();
+       $message = Message::all()->count();
+
+       return view('dashboard', compact('post', 'message'));
+    }
 
     /**h
      * Show the form for creating a new resource.

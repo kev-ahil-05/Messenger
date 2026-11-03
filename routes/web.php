@@ -27,10 +27,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('message', MessageController::class);
-
+Route::resource('dashboard',DashboardController::class);
 Route::resource('posts',PostController::class);
 
-
+ 
 Route::resource('print-file',PdsController::class);
 
 require __DIR__.'/auth.php';
