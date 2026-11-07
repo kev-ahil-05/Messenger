@@ -112,7 +112,7 @@
             <!-- Close Button -->
             <button onclick="closeEditModal()"
                 class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1 rounded-full hover:bg-slate-100 transition-all cursor-pointer">
-                <i class="fa-solid fa-xmark text-sm">close</i>
+                <i class="fa-solid fa-xmark text-sm"></i>
             </button>
 
             <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
@@ -120,7 +120,7 @@
             </h3>
 
             <!-- Form para sa Edit Update -->
-            @foreach ($userMessages as $msg)
+           
                 <form action="{{ route('message.update', $msg->id) }}" method="POST" class="space-y-4">
                     @csrf
                     @method('PUT')
@@ -144,7 +144,7 @@
                         </button>
                     </div>
                 </form>
-            @endforeach
+           
         </div>
     </div>
 
@@ -163,7 +163,7 @@
         window.openEditModal = openEditModal;
 
         function closeEditModal() {
-            document.getElementById('editmsg').classList.remove('hidden');
+            document.getElementById('editmsg').classList.add('hidden');
         }
         window.closeEditModal = closeEditModal;
 

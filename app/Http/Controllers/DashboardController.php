@@ -16,8 +16,8 @@ class DashboardController extends Controller
     public function index()
 
     {
-       $post = Post::all()->count();
-       $message = Message::all()->count();
+       $post = Post::count();
+       $message = Message::count();
 
        return view('dashboard', compact('post', 'message'));
     }

@@ -60,24 +60,29 @@ class MessageController extends Controller
      */
     public function edit(Message $message)
     {
-        //
+        
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request)
-{
-     $request->validate([
-            'message' => 'required|string|max:255',
-        ]);
 
-        $message = new Message();
-        $message->message = $request->input('message');
-        $message->users_id = auth()->id();
-        $message->save();
+    public function update(Request $request, Message $message)
+{
+    
+    $request->validate([
+        'message' => 'required|string|max:255',
+    ]);
+
+    
+    $message->update([
+        'message' => $request->input('message'),
+      
+    ]);
+
+    // 3. I-redirect pabalik kasama ang success message
     return redirect(route('message.index', absolute: false))->with('success', 'Message updated successfully!');
-}      
+}
      
 
 

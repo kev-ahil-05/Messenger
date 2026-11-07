@@ -53,11 +53,12 @@
             <div class="space-y-4">
                 @foreach ($posts as $post)
                     <div class="card bg-white border border-slate-200 shadow-sm rounded-sm p-6">
-                        <span class="font-sm text-slate-500">{{ $post->user->name ?? 'N/A' }}</span>
-                        <div class="text-slate-700 text-sm leading-relaxed flex justify-start">{{ $post->post }}</div>
+                        <span class="font-sm text-slate-500">{{ $post->user->email ?? 'N/A' }}</span>
 
 
-                        <div class="flex justify-center text-xs text-slate-400 mb-2 h-25 w-25">
+
+                        <div class="flex  flex-col justify-center text-xs text-slate-400 mb-2 h-25 w-25">
+                            <div class="text-slate-700 text-sm leading-relaxed flex justify-start">{{ $post->post }}</div>
                             <img src="{{ asset('storage/' . $post->file) }}" alt="{{ $post->file }}"
                                 class="rounded my-2 h-25 w-25">
 
@@ -67,21 +68,23 @@
                         </div>
 
                     </div>
-              
+
+
+
+
+
+                    <button type="submit" onclick="editPost()">edit</button>
+                    <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <button type="submit" onclick="return confirm('Are you sure to delete this message?')"
+                            class="text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-0.5 transition-colors cursor-pointer">
+                            <i class="fa-solid fa-trash-can text-[9px]"></i>delete
+                        </button>
+                    </form>
+                @endforeach
             </div>
-
-
         </div>
-        <button type="submit" onclick="editPost()">edit</button>
-        <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
-            @csrf
-            @method('delete')
-            <button type="submit" onclick="return confirm('Are you sure to delete this message?')"
-                class="text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-0.5 transition-colors cursor-pointer">
-                <i class="fa-solid fa-trash-can text-[9px]"></i>delete
-            </button>
-        </form>
-          @endforeach
     </div>
     <script>
         function editPost() {
