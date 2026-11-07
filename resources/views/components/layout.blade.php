@@ -9,6 +9,7 @@
    <title>{{ config('app.name', 'Laravel') }}</title>
 
    <!-- Fonts -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
    <link rel="preconnect" href="https://fonts.bunny.net">
     <link rel="stylesheet" href="https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -156,7 +157,7 @@
                   Dashboard
 
                </a> --}}
-               <a href="{{ route('dashboard.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-xl transition-all indigo:hover:bg-neutral-800  duration-200  text-white shadow-lg shadow-indigo-600/10">
+               <a href="{{ route('dashboard.index') }}" class="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-xl transition-all dark:hover:bg-neutral-800  duration-200  text-white shadow-lg shadow-indigo-600/10">
             <!-- Icon Dashboard -->
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V16zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V16z"/></svg>
             Dashboard
@@ -169,7 +170,7 @@
             <ul class="mt-3 space-y-1 text-sm text-slate-800 dark:text-slate-400 font-medium">
                <li>
                   <a href="{{ route('message.index') }}"
-                     class="flex items-center gap-2.5 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 indigo:hover:bg-neutral-800 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                     class="flex items-center gap-2.5 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-neutral-800 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                      <svg xmlns="http://www.w3.org/2000/svg" class="size-[18px] fill-current overflow-visible"
                         viewBox="0 0 512 512" aria-hidden="true">
                         <path
@@ -184,7 +185,7 @@
                </li>
                <li>
                   <a href="{{ route('posts.index') }}"
-                     class="flex items-center gap-2.5 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 indigo:hover:bg-neutral-800 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                     class="flex items-center gap-2.5 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-neutral-800 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                      <svg xmlns="http://www.w3.org/2000/svg" class="size-[18px] fill-current overflow-visible"
                         viewBox="0 0 28 28" aria-hidden="true">
                         <switch transform="translate(-1.68 -1.68)scale(1.12)">
@@ -201,7 +202,21 @@
                 <li>
                   <a href="{{ route('logout') }}"
                      class="flex items-center gap-2.5 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-neutral-800 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
-                     <i class="fa-solid fa-switch"></i>
+                     <i class="fa-solid fa-user"></i>
+                     Profile
+                  </a>
+               </li>
+                <li>
+                  <a href="{{ route('logout') }}"
+                     class="flex items-center gap-2.5 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-neutral-800 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                     <i class="fa-solid fa-gear"></i>
+                     Setting
+                  </a>
+               </li>
+                <li>
+                  <a href="{{ route('logout') }}"
+                     class="flex items-center gap-2.5 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-neutral-800 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                     <i class="fa-solid fa-right-from-bracket"></i>
                      Logout
                   </a>
                </li>
