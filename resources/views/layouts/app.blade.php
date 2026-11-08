@@ -136,9 +136,7 @@
    <aside
       class="bg-white dark:bg-neutral-900 border-r border-slate-300 dark:border-neutral-700 w-full h-full fixed top-0 left-0 max-w-[264px] py-6 px-4 overflow-auto">
 
-      <div class="min-w-9 mb-8 px-3">
-         <img src="https://readymadeui.com/logo-alt.svg" alt="Company logo" class="h-9 w-auto" />
-      </div>
+    
 
       <nav aria-label="Primary sidebar navigation">
          <ul class="space-y-1 text-sm text-slate-800 dark:text-slate-400 font-medium">

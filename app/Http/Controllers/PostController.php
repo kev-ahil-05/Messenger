@@ -15,7 +15,7 @@ class PostController extends Controller
 
     {
         $posts = Post::with('user')->latest()->take(50)->get();
-        return view('home', compact('posts',));
+        return view('post.index', compact('posts',));
     }
 
     /**h
@@ -64,11 +64,11 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id, Post $post)
+    public function edit(Post $post)
     {
-        $post = Post::findOrFail($id);
+        
 
-         return view('home')->with('success', 'Post as been delete');
+         return view('post.edit')->with('success', 'Post as been delete');
 
     }
 
@@ -104,6 +104,6 @@ class PostController extends Controller
     {
        
         $post->delete();
-        return view('home')->with('success', 'Post as been delete');
+        return view('post.index')->with('success', 'Post as been delete');
     }
 }

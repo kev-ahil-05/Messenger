@@ -52,7 +52,7 @@
         <div class="w-full max-w-7xl mx-auto flex-1 min-w-0">
             <div class="space-y-4">
                 @foreach ($posts as $post)
-                    <div class="card bg-white border border-slate-200 shadow-sm rounded-sm p-6">
+                    <div class="card bg-white border border-slate-200 shadow-sm rounded-sm p-6 m-4">
                         <span class="font-sm text-slate-500">{{ $post->user->email ?? 'N/A' }}</span>
 
 
@@ -66,22 +66,25 @@
                         <div class="text-xs text-slate-400 mb-2">
                             {{ $post->created_at ? $post->created_at->timezone('Asia/Manila')->format('h:i A') : '' }}
                         </div>
-
+                        <div class="flex justify-between">
+                            <a href="{{ route('posts.edit', $post->id) }}"><i class="fa-solid fa-pencil"></i></a>
+                            <form action="{{ route('posts.destroy', $post->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" onclick="return confirm('Are you sure to delete this message?')"
+                                    class="text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-0.5 transition-colors cursor-pointer">
+                                    <i class="fa-solid fa-trash-can text-[24px]"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
 
 
 
 
 
-                    <button type="submit" onclick="editPost()">edit</button>
-                    <form action="{{ route('posts.destroy', $post->id) }}" method="POST"  enctype="multipart/form-data">
-                        @csrf
-                        @method('delete')
-                        <button type="submit" onclick="return confirm('Are you sure to delete this message?')"
-                            class="text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-0.5 transition-colors cursor-pointer">
-                            <i class="fa-solid fa-trash-can text-[9px]"></i>delete
-                        </button>
-                    </form>
+
                 @endforeach
             </div>
         </div>
