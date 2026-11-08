@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
     <div class="p-6 bg-slate-100 dark:bg-neutral-900 min-h-screen">
         <x-slot name="header">
             <span class="text-indigo-600 font-bold">Feed Updates</span>
@@ -74,7 +74,7 @@
 
 
                     <button type="submit" onclick="editPost()">edit</button>
-                    <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
+                    <form action="{{ route('posts.destroy', $post->id) }}" method="POST"  enctype="multipart/form-data">
                         @csrf
                         @method('delete')
                         <button type="submit" onclick="return confirm('Are you sure to delete this message?')"
@@ -103,4 +103,4 @@
 
     </script>
 
-</x-layout>
+</x-app-layout>

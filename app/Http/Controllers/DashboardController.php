@@ -15,11 +15,12 @@ class DashboardController extends Controller
      */
     public function index()
 
-    {
+    {  
+       $users = User::count();
        $post = Post::count();
        $message = Message::count();
 
-       return view('dashboard', compact('post', 'message'));
+       return view('dashboard', compact('post', 'message','users'));
     }
 
     /**h

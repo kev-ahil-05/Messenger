@@ -15,9 +15,8 @@ class PostController extends Controller
 
     {
         $posts = Post::with('user')->latest()->take(50)->get();
-        $users = User::all();
-        return view('home', compact('posts'));
-}
+        return view('home', compact('posts',));
+    }
 
     /**h
      * Show the form for creating a new resource.
@@ -65,11 +64,11 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $id, Post $post)
     {
         $post = Post::findOrFail($id);
 
-         return view('Dashboard')->with('success', 'Post as been delete');
+         return view('home')->with('success', 'Post as been delete');
 
     }
 
@@ -101,11 +100,10 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $post, string $id)
+    public function destroy(Post $post)
     {
-        $post = Post::findOrFail($id);
+       
         $post->delete();
-
-        return view('Dashboard')->with('success', 'Post as been delete');
+        return view('home')->with('success', 'Post as been delete');
     }
 }

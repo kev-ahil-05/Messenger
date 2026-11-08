@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
     <!-- Main Screen Container -->
     <div class="flex h-[calc(100vh-4rem)] w-full bg-slate-50 overflow-hidden items-center mt-2">
 
@@ -169,4 +169,4 @@
 
     </script>
 
-</x-layout>
+</x-app-layout>

@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
     <!-- Include Chart.js via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -33,7 +33,7 @@
             </div>
 
             <!-- Feature 2: Analytics / Statistics Cards Counters -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 <!-- Card 1: Total Posts -->
                 <div class="card bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-center gap-4 group">
                     <div class="p-3 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-xl group-hover:bg-indigo-600 group-hover:text-white transition-all">
@@ -53,6 +53,16 @@
                     <div>
                         <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Messages Sent</p>
                         <h3 class="text-2xl font-black text-slate-800 dark:text-slate-100 mt-0.5">{{ $message }}</h3>
+                    </div>
+                </div>
+
+                <div class="card bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-center gap-4 group">
+                    <div class="p-3 bg-white-50 dark:bg-slate-900/40 text-white-600 dark:text-emerald-400 rounded-xl group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-user text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Total users</p>
+                        <h3 class="text-2xl font-black text-slate-800 dark:text-slate-100 mt-0.5">{{ $users }}</h3>
                     </div>
                 </div>
             </div>
@@ -222,4 +232,4 @@
             });
         });
     </script>
-</x-layout>
+</x-app-layout>

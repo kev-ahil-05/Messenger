@@ -80,7 +80,7 @@ class MessageController extends Controller
       
     ]);
 
-    // 3. I-redirect pabalik kasama ang success message
+    
     return redirect(route('message.index', absolute: false))->with('success', 'Message updated successfully!');
 }
      
