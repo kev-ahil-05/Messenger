@@ -64,18 +64,18 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        
+        $post = Post::findOrFail($id);
 
-         return view('post.edit')->with('success', 'Post as been delete');
+         return view('post.edit', compact('post'))->with('success', 'Post as been delete');
 
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Post $post)
     {
          $validated = $request->validate([
          'post' => 'required|string|max:255',
@@ -92,9 +92,9 @@ class PostController extends Controller
        
       
 
-         Post::update($validated);
+         $post->update($validated);
 
-            return redirect()->back()->with('success', 'Post has been update');
+           return view('post.index')->with('success', 'Post as been updated');
     }
 
     /**
