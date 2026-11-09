@@ -11,7 +11,7 @@
                 @method('PUT')
                 <textarea name="post" rows="3"
                     class="w-full border border-slate-200 bg-slate-50 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-all resize-none"
-                    placeholder="What is in your mind?" value="{{ old($post->post) }}"></textarea>
+                    placeholder="What is in your mind?" value="">{{ old($post->post) }}</textarea>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-3">
                     <input type="file" name="file" value="{{ old($post->file) }}"
                         class="text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100" />

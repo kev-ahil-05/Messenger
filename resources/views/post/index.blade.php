@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="p-6 bg-slate-100 dark:bg-neutral-900 min-h-screen">
         <x-slot name="header">
-            <span class="text-indigo-600 font-bold">Feed Updates</span>
+            <span class="text-indigo-600 font-bold">News Feed</span>
         </x-slot>
 
         <!-- Create Post Box -->
@@ -37,7 +37,7 @@
                         <div class="flex  flex-col justify-center text-xs text-slate-400 mb-2 h-25 w-25">
                             <div class="text-slate-700 text-sm leading-relaxed flex justify-start">{{ $post->post }}</div>
                             <img src="{{ asset('storage/' . $post->file) }}" alt="{{ $post->file }}"
-                                class="rounded my-2 h-25 w-25">
+                                class="rounded my-2 h-10 w-10">
 
                         </div>
                         <div class="text-xs text-slate-400 mb-2">
