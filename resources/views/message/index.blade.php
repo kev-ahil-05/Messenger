@@ -76,7 +76,7 @@
                                         @method('delete')
                                      <button type="submit" onclick="return confirm('Are you sure to delete this message?')"
                                         class="text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-0.5 transition-colors cursor-pointer">
-                                        <i class="fa-solid fa-trash-can text-[9px]"></i>delete 
+                                        <i class="fa-solid fa-trash-can text-[16px]"></i>
                                     </button>
                                      </form>
                                
@@ -116,7 +116,7 @@
             </button>
 
             <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-pen-to-square text-indigo-600"></i> Edit Message
+                <i class="fa-solid fa-pen-to-square text-indigo-600"></i> Edit
             </h3>
 
             <!-- Form para sa Edit Update -->
