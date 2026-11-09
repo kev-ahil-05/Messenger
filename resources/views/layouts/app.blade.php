@@ -205,14 +205,14 @@
                   </a>
                </li>
                 <li>
-                  <a href="{{ route('logout') }}"
+                  <a href=""
                      class="flex items-center gap-2.5 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-neutral-800 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                      <i class="fa-solid fa-gear"></i>
                      Setting
                   </a>
                </li>
                 <li>
-                  <a href="{{ route('logout') }}"
+                  <a href=""
                      class="flex items-center gap-2.5 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-neutral-800 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                      <i class="fa-solid fa-right-from-bracket"></i>
                      Logout
