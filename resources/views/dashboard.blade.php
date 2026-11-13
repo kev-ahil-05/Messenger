@@ -1,6 +1,6 @@
 <x-app-layout>
     <!-- Include Chart.js via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src=""></script>
 
     <div class="p-6 bg-slate-100 dark:bg-neutral-900 min-h-screen">
         <x-slot name="header">
