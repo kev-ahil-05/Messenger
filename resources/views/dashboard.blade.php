@@ -21,7 +21,7 @@
                         ✨ System Status: Optimal
                     </span>
                     <h1 class="text-2xl md:text-3xl font-black tracking-tight">
-                        Mabuhay, {{ Auth::user()->name }}!
+                        YOU'RE BACK, {{ Auth::user()->name }}!
                     </h1>
                     <p class="text-indigo-100 text-sm max-w-md font-medium leading-relaxed">
                         {{ __("You're successfully logged in!") }} Welcome back to your hub. Monitor your engagement and manage your talks today.
