@@ -116,7 +116,7 @@
             </button>
 
             <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-pen-to-square text-indigo-600"></i> Edit
+                <i class="fa-solid fa-pen-to-square text-indigo-600"></i> 
             </h3>
 
             <!-- Form para sa Edit Update -->
